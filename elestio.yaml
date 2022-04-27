@@ -1,0 +1,20 @@
+config:
+    runTime: 'NodeJs'
+    version: ''
+    framework: 'Angular'
+    buildCommand: 'ng build'
+    buildDir: 'dist/angular'
+    runCommand: 'ng serve'
+ports:
+  - protocol: "HTTPS"
+    targetProtocol: "HTTP"
+    listeningPort: "443"
+    targetPort: "3000"
+    public: true
+    path: "/"
+    isAuth: false
+    login: ""
+    password: ""
+environments:
+    -  key: 'ENV'
+       value: 'production'
