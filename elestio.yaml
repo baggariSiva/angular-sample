@@ -2,9 +2,9 @@ config:
     runTime: 'NodeJs'
     version: ''
     framework: 'Angular'
-    buildCommand: 'ng build'
+    buildCommand: 'npm run build'
     buildDir: 'dist/angular'
-    runCommand: 'ng serve'
+    runCommand: 'npm run start'
 ports:
   - protocol: "HTTPS"
     targetProtocol: "HTTP"
