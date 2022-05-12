@@ -5,11 +5,16 @@ config:
     buildCommand: 'npm run build'
     buildDir: 'dist/angular'
     runCommand: 'npm run start'
+exposedPorts:
+  - protocol: "HTTP"
+    hostPort: "4200"
+    containerPort: "4200"
+    interface: "172.17.0.1"
 ports:
   - protocol: "HTTPS"
     targetProtocol: "HTTP"
     listeningPort: "443"
-    targetPort: "3000"
+    targetPort: "4200"
     public: true
     path: "/"
     isAuth: false
